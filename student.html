@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Student Dashboard</h2>
+        <button id="logout">Logout</button>
+        <h3>Search Teachers</h3>
+        <form id="searchForm">
+            <label for="searchName">Name:</label>
+            <input type="text" id="searchName">
+            <label for="searchDepartment">Department:</label>
+            <input type="text" id="searchDepartment">
+            <button type="submit">Search</button>
+        </form>
+        <div id="teachersList"></div>
+        <h3>Send Message</h3>
+        <form id="messageForm">
+            <label for="teacherSelect">Teacher:</label>
+            <select id="teacherSelect" required></select>
+            <label for="message">Message:</label>
+            <textarea id="message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <h3>My Appointments</h3>
+        <div id="myAppointments"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+    <script src="student.js"></script>
+</body>
+</html>

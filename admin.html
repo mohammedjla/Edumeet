@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <button id="logout">Logout</button>
+        <h3>Add Teacher</h3>
+        <form id="addTeacherForm">
+            <label for="teacherName">Name:</label>
+            <input type="text" id="teacherName" required>
+            <label for="teacherEmail">Email:</label>
+            <input type="email" id="teacherEmail" required>
+            <label for="teacherPassword">Password:</label>
+            <input type="password" id="teacherPassword" required>
+            <label for="teacherDepartment">Department:</label>
+            <input type="text" id="teacherDepartment" required>
+            <label for="teacherSubjects">Subjects (comma separated):</label>
+            <input type="text" id="teacherSubjects" required>
+            <button type="submit">Add Teacher</button>
+        </form>
+        <h3>Teachers</h3>
+        <div id="teachersList"></div>
+        <h3>Pending Students</h3>
+        <div id="pendingStudents"></div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="script.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>
